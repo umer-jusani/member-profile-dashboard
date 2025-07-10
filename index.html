@@ -26,297 +26,274 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Your content here -->
-    <div class="container-fluid">
-      <div class="row">
-        <!-- Mobile Toggle Button -->
-        <button
-          class="btn btn-primary d-md-none m-3"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#sidebarMenu"
-          aria-controls="sidebarMenu"
-        >
-          <i class="bi bi-list"></i>
-        </button>
-
-        <!-- Sidebar (Desktop Only) -->
-        <aside
-          class="col-auto d-none d-md-block sidebar text-white px-0 py-4 min-vh-100"
-        >
-          <nav aria-label="Sidebar Navigation">
-            <!-- <img src="assets/logo.png" class="logo mx-auto d-block mb-3" alt="Logo" /> -->
-
-            <!-- PEOPLE -->
-            <ul class="nav flex-column text-center mb-3">
-              <li class="nav-item">
-                <span class="nav-link text-white-50 small">PEOPLE</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-people"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-calendar2-week"></i
-                ></a>
-              </li>
-            </ul>
-
-            <!-- SCHEDULE -->
-            <ul class="nav flex-column text-center mb-3">
-              <li class="nav-item">
-                <span class="nav-link text-white-50 small">SCHEDULE</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-person-fill"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-calendar"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-file-earmark"></i
-                ></a>
-              </li>
-            </ul>
-
-            <!-- SALE -->
-            <ul class="nav flex-column text-center mb-3">
-              <li class="nav-item">
-                <span class="nav-link text-white-50 small">SALE</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-percent"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-wallet2"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-receipt"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-funnel"></i
-                ></a>
-              </li>
-            </ul>
-
-            <!-- PAYMENT -->
-            <ul class="nav flex-column text-center mb-3">
-              <li class="nav-item">
-                <span class="nav-link text-white-50 small">PAYMENT</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-people"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-calendar2-week"></i
-                ></a>
-              </li>
-            </ul>
-
-            <!-- SPARK -->
-            <ul class="nav flex-column text-center mb-3">
-              <li class="nav-item">
-                <span class="nav-link text-white-50 small">SPARK</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-ev-front"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-calendar2-week"></i
-                ></a>
-              </li>
-            </ul>
-
-            <!-- OTHERS -->
-            <ul class="nav flex-column text-center mb-3">
-              <li class="nav-item">
-                <span class="nav-link text-white-50 small">OTHERS</span>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-gear"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-chat-dots"></i
-                ></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="#"
-                  ><i class="bi bi-box-arrow-right"></i
-                ></a>
-              </li>
-            </ul>
-          </nav>
-        </aside>
-
-        <!-- Sidebar (Mobile Only) -->
-        <aside
-          class="offcanvas offcanvas-start sidebar text-white px-0 py-4 fs-6 fw-semibold"
-          tabindex="-1"
-          id="sidebarMenu"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title text-white">Menu</h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav
-              class="col-md-auto col-0 sidebar text-white px-0 py-4 min-vh-100 fs-6 fw-semibold w-auto"
+    <main class="container-fluid">
+      <div class="row bg-black">
+        <!-- header -->
+        <header id="primary-header" class="col-12 px-0">
+          <nav class="navbar navbar-expand-lg px-md-3 px-sm-2 px-1">
+            <!-- Search Input -->
+            <form
+              id="searchIcon"
+              class="d-flex position-relative w-100"
+              style="max-width: 300px"
             >
-              <!-- <img src="assets/logo.png" class="logo" /> -->
-              <!-- People -->
-              <ul class="nav flex-column text-center mb-3">
-                <li class="nav-item">
-                  <a class="nav-link" data-role="head" href="#">PEOPLE</a>
-                </li>
-                <li class="nav-item text-center">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-people"></i
-                  ></a>
-                </li>
-                <li class="nav-item text-center">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-calendar2-week"></i
-                  ></a>
-                </li>
-              </ul>
-              <!-- SCHEDULE -->
-              <ul class="nav flex-column text-center mb-3">
-                <li class="nav-item">
-                  <a class="nav-link" data-role="head" href="#">SCHEDULE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="bi bi-person-fill"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="bi bi-calendar"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"
-                    ><i class="bi bi-file-earmark"></i
-                  ></a>
-                </li>
-              </ul>
-              <!-- SALE -->
-              <ul class="nav flex-column text-center mb-3">
-                <li class="nav-item">
-                  <a class="nav-link" data-role="head" href="#">SALE</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-percent"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-wallet2"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-receipt"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-funnel"></i
-                  ></a>
-                </li>
-              </ul>
-              <!-- PAYMENT -->
-              <ul class="nav flex-column text-center mb-3">
-                <li class="nav-item">
-                  <a class="nav-link" data-role="head" href="#">PAYMENT</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-people"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-calendar2-week"></i
-                  ></a>
-                </li>
-              </ul>
-              <!-- SPARK -->
-              <ul class="nav flex-column text-center mb-3">
-                <li class="nav-item">
-                  <a class="nav-link" data-role="head" href="#">SPARK</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-ev-front"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-calendar2-week"></i
-                  ></a>
-                </li>
-              </ul>
-              <!-- OTHERS -->
-              <ul class="nav flex-column text-center mb-3">
-                <li class="nav-item">
-                  <a class="nav-link" data-role="head" href="#">OTHERS</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-gear"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-chat-dots"></i
-                  ></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-white" href="#"
-                    ><i class="bi bi-box-arrow-right"></i
-                  ></a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </aside>
+              <button
+                class="position-absolute start-0 top-50 translate-middle-y bg-transparent border-0 p-0 z-2 ms-3"
+                type="submit"
+                aria-label="Search"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+              <input
+                class="form-control ps-5 border-none py-2"
+                type="search"
+                placeholder="Search contact"
+                aria-label="Search contact"
+              />
+            </form>
 
-        <!-- Main Content -->
-        <div class="border bg-light">
-          <!-- Top Tabs, Metrics, Profile Card + Info, Table -->
+            <div
+              class="collapse navbar-collapse mx-5"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ms-auto gap-2">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-person fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-people fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-star fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-calendar4-week fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-chat-right-dots fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-file-binary fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-bell fs-5 text-black"></i>
+                  </a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="bi bi-clock fs-5 text-black"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Profile  -->
+            <div class="profile-display d-flex">
+              <div class="profile-pic">
+                <img
+                  src="/assets/profile.jpg"
+                  alt="Profile"
+                  class="rounded-1"
+                  width="40"
+                  height="40"
+                />
+              </div>
+
+              <div class="profile-info mx-2 d-sm-block d-none">
+                <div class="text-black fw-semibold">Savannah Nguyen</div>
+                <div class="profile-role text-muted small">Admin</div>
+              </div>
+
+              <div class="dropdown-arrow mt-1 d-sm-block d-none">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 6L8 10L12 6"
+                    stroke="#6C757D"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <div class="col-12 px-0">
+          <div class="container-fluid">
+            <div class="row">
+              <!-- Profile Information  -->
+              <section
+                id="personal-Information"
+                class="col-3 p-md-3 p-1 flow"
+                style="--flow-spacer: 2rem"
+              >
+                <div class="flow" style="--flow-spacer: 1rem">
+                  <div class="position-relative">
+                    <img
+                      src="/assets/profile.jpg"
+                      alt="Profile"
+                      class="rounded-4"
+                    />
+                    <div
+                      class="upload-icon rounded-circle bg-white position-absolute"
+                    >
+                      <i class="bi bi-camera fs-4 text-primary"></i>
+                    </div>
+                  </div>
+                  <h1 class="text-black">Max Hollaway</h1>
+                  <button type="button" class="btn btn-primary w-100">
+                    <i class="bi bi-hand-index-thumb fs-5 px-2"></i>
+                    Quick Actions
+                    <i class="bi bi-arrow-bar-down fs-5 px-2"></i>
+                  </button>
+                  <!-- Belongings Buttons -->
+                  <div class="d-grid" data-user="belongings">
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary w-100 border-0"
+                    >
+                      <i class="pe-2 bi bi-folder-plus"></i>
+                      Add Credit
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary w-100 border-0"
+                    >
+                      <i class="pe-2 bi bi-person"></i>
+                      Create Workout
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary w-100 border-0"
+                    >
+                      <i class="pe-2 bi bi-heart-pulse"></i>
+                      Show Fitness
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-primary border-0"
+                    >
+                      <i class="pe-2 bi bi-printer"></i>
+                      Bar Code Print
+                    </button>
+                  </div>
+                </div>
+
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h2 class="fs-5 text-black fw-semibold">
+                          Personal Info
+                        </h2>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        <strong
+                          >This is the first item's accordion body.</strong
+                        >
+                        It is shown by default, until the collapse plugin adds
+                        the appropriate classes that we use to style each
+                        element. These classes control the overall appearance,
+                        as well as the showing and hiding via CSS transitions.
+                        You can modify any of this with custom CSS or overriding
+                        our default variables. It's also worth noting that just
+                        about any HTML can go within the
+                        <code>.accordion-body</code>, though the transition does
+                        limit overflow.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item border-0">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        <h2 class="fs-5 text-black fw-semibold">Tags</h2>
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body random" data-role="tags">
+                        <button type="button" class="btn">
+                          <i class="bi bi-tag fs-6"></i>
+                          benefits-focus
+                        </button>
+                        <button type="button" class="btn">
+                          <i class="bi bi-tag fs-6"></i>
+                          attended-appointment
+                        </button>
+                        <button type="button" class="btn">
+                          <i class="bi bi-tag fs-6"></i>
+                          bought-uniform
+                        </button>
+                        <button type="button" class="btn">
+                          <i class="bi bi-tag fs-6"></i>
+                          interested-in-kungfu
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <div class="col-auto">
+                <!-- navlinks  -->
+                <section id="navigation-tabs">navlinks</section>
+
+                <!-- Stats  -->
+                <section id="stats">Stats</section>
+
+                <!-- Table  -->
+                <section id="table">Table</section>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

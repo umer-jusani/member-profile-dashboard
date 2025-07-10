@@ -3,20 +3,17 @@
   --clr-secondary: #007bff;
   --clr-tertiary: #0d6efd;
   --clr-gray: #8b8b8b;
+  --clr-light-gray-100: rgba(228, 228, 230);
+  --clr-light-gray-200: rgba(247, 248, 250);
   --clr-lightBlue: #4a90e2;
   --clr-purple: #9b59b6;
   --clr-yellow: #f1c40f;
   --clr-red: #e91e63;
   --clr-green: #2ecc71;
   --clr-black: #212529;
+  --clr-white: #212529;
 
   --color-sidebar-bg: rgba(46, 50, 80, 1);
-  --color-tag-bg: var(--clr-1);
-  /* --color-metric-blue: #4a90e2; */
-  /* --color-metric-purple: #9b59b6; */
-  /* --color-metric-yellow: #f1c40f; */
-  /* --color-metric-pink: #e91e63; */
-  /* --color-metric-green: #2ecc71; */
 
   /* Font-Colors */
   --fs-clr-primary: var(--clr-gray);
@@ -24,7 +21,11 @@
   --fs-clr-tertiary: var(--clr-secondary);
 }
 
-.border {
+.flow > *:not(:first-child) {
+  margin-top: var(--flow-spacer, 3em);
+}
+
+.random {
   border: 2px solid red;
 }
 
@@ -58,6 +59,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  color: var(--clr-gray);
 }
 
 /* A elements that don't have a class get default styles */
@@ -103,7 +105,7 @@ select {
 .sidebar .nav-link {
   font-size: 14px;
   color: var(--fs-clr-primary) !important;
-  background-color: var(--color-sidebar-bg);
+  background-color: var(--clr-light-gray);
 
   & .nav-link i {
     font-size: 17px;
@@ -111,5 +113,81 @@ select {
 
   & .logo {
     width: 60px;
+  }
+}
+
+/* primary header */
+#primary-header nav {
+  background-color: var(--clr-light-gray-200);
+}
+
+#primary-header input[type="search"] {
+  background-color: var(--clr-light-gray-100);
+}
+
+#primary-header input[type="search"]::placeholder {
+  color: var(--fs-clr-primary);
+  font-weight: 450;
+  opacity: 1;
+}
+
+#primary-header ul li {
+  border: 2px solid #cfd1d2;
+  background-color: var(--clr-light-gray-100);
+  border-radius: 5px;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile Information */
+#personal-Information {
+  background-color: white;
+  border: 1px solid #cfd1d2;
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+
+  & [data-user="belongings"] {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  & [data-user="belongings"] button {
+    font-weight: 500;
+    background-color: rgba(232, 242, 253, 1);
+  }
+
+  & .upload-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 3%;
+    right: 3%;
+    cursor: pointer;
+  }
+
+  & [data-role="tags"] {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 5px;
+  }
+}
+
+#personal-Information .accordion-button,
+#personal-Information .accordion-body {
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  & button {
+    font-weight: 550;
+    background-color: var(--clr-light-gray-100);
   }
 }
