@@ -24,6 +24,10 @@
   --fs-clr-tertiary: var(--clr-secondary);
 }
 
+.border {
+  border: 2px solid red;
+}
+
 *,
 *::before,
 *::after {
