@@ -1,7 +1,6 @@
 :root {
   --clr-primary: #1c2430;
-  --clr-secondary: #007bff;
-  --clr-tertiary: #0d6efd;
+  --clr-blue: #1180e2;
   --clr-gray: #8b8b8b;
   --clr-light-gray-100: rgba(228, 228, 230);
   --clr-light-gray-200: rgba(247, 248, 250);
@@ -10,15 +9,15 @@
   --clr-yellow: #f1c40f;
   --clr-red: #e91e63;
   --clr-green: #2ecc71;
-  --clr-black: #212529;
-  --clr-white: #212529;
+  --clr-white: #ffff;
 
   --color-sidebar-bg: rgba(46, 50, 80, 1);
 
   /* Font-Colors */
-  --fs-clr-primary: var(--clr-gray);
-  --fs-clr-secondary: var(--clr-black);
-  --fs-clr-tertiary: var(--clr-secondary);
+  --fs-clr-black: var(--clr-primary);
+  --fs-clr-white: var(--clr-white);
+  --fs-clr-blue: var(--clr-blue);
+  --fs-clr-gray: var(--clr-gray);
 }
 
 .flow > *:not(:first-child) {
@@ -59,7 +58,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  color: var(--clr-gray);
+  color: var(--fs-clr-black);
 }
 
 /* A elements that don't have a class get default styles */
@@ -113,7 +112,7 @@ select {
 .sidebar [data-role="head"],
 .sidebar .nav-link {
   font-size: 14px;
-  color: var(--fs-clr-primary) !important;
+  /* color: var(--fs-clr-primary) !important; */
   background-color: var(--clr-light-gray);
 
   & .nav-link i {
@@ -135,7 +134,7 @@ select {
 }
 
 #primary-header input[type="search"]::placeholder {
-  color: var(--fs-clr-primary);
+  color: var(--fs-clr-gray);
   font-weight: 450;
   opacity: 1;
 }
@@ -225,23 +224,20 @@ select {
 #navigation-tabs {
   border: 1px solid #cfd1d2;
   border-left: none;
-  /* & a {
-    padding-block: 1rem;
-
-    @media (max-width: 40em) {
-       padding-block: 1rem;
-    }
-  } */
 
   & nav {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
   }
 
+  & .nav-link {
+    color: var(--fs-clr-black);
+  }
+
   & .nav-link:hover,
   & [data-link="active"] {
-    border-bottom: 2px solid #0d6efd; /* Bootstrap primary color */
-    color: #0d6efd; /* Match text color to border */
+    border-bottom: 2px solid #0d6efd;
+    color: var(--clr-blue);
   }
 }
 
@@ -265,7 +261,7 @@ select {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--fs-clr-gray);
   }
 
   & .card-icon {
@@ -286,5 +282,5 @@ select {
 
 .card span {
   font-size: 14px;
-  color: rgba(0, 0, 0, 0.6);
+  color: var(--fs-clr-gray);
 }
