@@ -224,6 +224,12 @@ select {
 #navigation-tabs {
   border: 1px solid #cfd1d2;
   border-left: none;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   & nav {
     display: grid;
@@ -254,6 +260,7 @@ select {
   & .cus-card {
     background: linear-gradient(var(--bg-color));
     position: relative;
+    border: none;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
@@ -296,11 +303,26 @@ select {
   & [data-role="checkbox"] {
     color: rgba(216, 216, 216, 1);
   }
+
+  & .wrapper {
+    z-index: 999;
+    border-radius: 10px;
+    border: 1px solid #cfd1d2;
+  }
+
+  & .wrapper > div:first-child {
+    background-color: rgba(234, 238, 241, 1);
+    border-radius: 10px;
+    border: 1px solid #cfd1d2;
+  }
 }
 
 .table td,
 .table th {
   vertical-align: middle;
   padding-block: 18px;
-  border-bottom: 2px solid black;
+
+  @media (max-width: 40em) {
+    padding-block: 10px;
+  }
 }
