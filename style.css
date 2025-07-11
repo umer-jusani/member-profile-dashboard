@@ -284,3 +284,23 @@ select {
   font-size: 14px;
   color: var(--fs-clr-gray);
 }
+
+/* Table Section */
+#table-container {
+  & thead {
+    border-radius: 10px;
+    background-color: rgba(242, 242, 242, 1);
+    font-weight: 500;
+  }
+
+  & [data-role="checkbox"] {
+    color: rgba(216, 216, 216, 1);
+  }
+}
+
+.table td,
+.table th {
+  vertical-align: middle;
+  padding-block: 18px;
+  border-bottom: 2px solid black;
+}
