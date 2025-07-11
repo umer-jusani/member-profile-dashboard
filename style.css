@@ -23,6 +23,7 @@
 
 .flow > *:not(:first-child) {
   margin-top: var(--flow-spacer, 3em);
+
 }
 
 .random {
@@ -189,5 +190,25 @@ select {
   & button {
     font-weight: 550;
     background-color: var(--clr-light-gray-100);
+  }
+}
+
+#personal-Information .accordion-button {
+  @media (max-width: 30em) {
+    padding-top: 2px;
+  }
+}
+
+#personal-Information .accordion-body .nav-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  padding-block: 5px;
+  border-bottom: 2px solid var(--clr-light-gray-200);
+  grid-gap: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: var(--clr-light-gray-200);
   }
 }
