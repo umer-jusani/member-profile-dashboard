@@ -23,7 +23,6 @@
 
 .flow > *:not(:first-child) {
   margin-top: var(--flow-spacer, 3em);
-
 }
 
 .random {
@@ -97,6 +96,15 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* general Styling */
+[data-role="main-content"] > div > * {
+  padding-inline: 16px;
+
+  @media (max-width: 50em) {
+    padding-inline: 4px;
   }
 }
 
@@ -211,4 +219,66 @@ select {
     cursor: pointer;
     background-color: var(--clr-light-gray-200);
   }
+}
+
+/* navigation-tabs */
+#navigation-tabs {
+  border: 1px solid #cfd1d2;
+  border-left: none;
+  /* & a {
+    padding-block: 1rem;
+
+    @media (max-width: 40em) {
+       padding-block: 1rem;
+    }
+  } */
+
+  & nav {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+/* dashboard stats */
+#dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+
+  @media (max-width: 40em) {
+    gap: 0.5rem;
+  }
+
+  & .cus-card {
+    background: linear-gradient(var(--bg-color));
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  & .card .footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  & .card-icon {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card span {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
 }

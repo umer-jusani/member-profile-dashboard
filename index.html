@@ -27,7 +27,7 @@
   </head>
   <body>
     <main class="container-fluid">
-      <div class="row bg-black">
+      <div class="row">
         <!-- header -->
         <header id="primary-header" class="col-12 px-0">
           <nav class="navbar navbar-expand-lg px-md-3 px-sm-2 px-1">
@@ -140,7 +140,7 @@
 
         <div class="col-12 px-0">
           <div class="container-fluid">
-            <div class="row">
+            <div class="row bg-black" data-role="main-content">
               <!-- Profile Information  -->
               <section
                 id="personal-Information"
@@ -307,15 +307,158 @@
                 </div>
               </section>
 
-              <div class="col-auto">
+              <div class="col-md-9 px-0 flow" style="--flow-spacer: 1.5rem">
                 <!-- navlinks  -->
-                <section id="navigation-tabs">navlinks</section>
+                <section id="navigation-tabs" class="bg-white random px-0">
+                  <nav
+                    class="nav nav-tabs border-bottom-0"
+                    id="navigation-tabs"
+                  >
+                    <a class="nav-link py-md-3 py-2 text-center" href="#">
+                      <i class="bi bi-person-square me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none">Profile</span>
+                    </a>
+                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                      <i class="bi bi-file-text me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none">Notes</span>
+                    </a>
+                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                      <i class="bi bi-chat-left-dots me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none"
+                        >Communication</span
+                      >
+                    </a>
+                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                      <i class="bi bi-person me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none">Workouts</span>
+                    </a>
+                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                      <i class="bi bi-calendar-check me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none">Attendence</span>
+                    </a>
+                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                      <i class="bi bi-receipt me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none">Invoices</span>
+                    </a>
+                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                      <i class="bi bi-bar-chart-line me-1 fs-5"></i>
+                      <span class="d-lg-inline-block d-none">Ranks</span>
+                    </a>
+                  </nav>
+                </section>
 
-                <!-- Stats  -->
-                <section id="stats">Stats</section>
+                <!-- Dashboard Stats Cards  -->
+                <section id="dashboard-stats">
+                  <!-- card 1 -->
+                  <div
+                    class="card p-4 rounded-4 cus-card"
+                    style="--bg-color: to bottom right, #e0f2ff, #d1e9ff"
+                  >
+                    <div>
+                      <div style="min-height: 3rem">
+                        <h6 class="m-0">Email Sent</h6>
+                        <span class="fw-semibold">Last 60 days</span>
+                      </div>
+                      <div class="count my-2 fs-1 fw-semibold">6</div>
+                      <div class="footer fw-semibold">
+                        <div>Opened: 1</div>
+                        <div>Bounce: 1</div>
+                      </div>
+                    </div>
+                    <div class="card-icon">
+                      <i class="bi bi-envelope-fill fs-4"></i>
+                    </div>
+                  </div>
+
+                  <!-- card 2 -->
+                  <div
+                    class="card p-4 rounded-4 cus-card"
+                    style="
+                      --bg-color: to right, #84ffc9 0%, #aab2ff 50%,
+                        #eca0ff 100%;
+                    "
+                  >
+                    <div>
+                      <div style="min-height: 3rem">
+                        <h6 class="m-0">Appointment Booked</h6>
+                      </div>
+                      <!-- <span class="fw-semibold">Last 60 days</span> -->
+                      <div class="count my-2 fs-1 fw-semibold">0</div>
+                      <div class="footer fw-semibold">
+                        <div>Showed: 0</div>
+                        <div>No Show: 0</div>
+                      </div>
+                    </div>
+                    <div class="card-icon">
+                      <i class="bi bi-calendar2-plus-fill fs-4"></i>
+                    </div>
+                  </div>
+
+                  <!-- card 3 -->
+                  <div
+                    class="card p-4 rounded-4 cus-card"
+                    style="--bg-color: to right, #f9c58d 50%, #f492f0 100%"
+                  >
+                    <div>
+                      <div style="min-height: 3rem">
+                        <h6 class="m-0">Total Attendence</h6>
+                      </div>
+                      <!-- <span class="fw-semibold">Last 60 days</span> -->
+                      <div class="count my-2 fs-1 fw-semibold">81</div>
+                      <div class="footer fw-semibold">
+                        <div>Last: 7</div>
+                        <div>Days: 3</div>
+                      </div>
+                    </div>
+                    <div class="card-icon">
+                      <i class="bi bi-calendar2-check-fill fs-4"></i>
+                    </div>
+                  </div>
+
+                  <!-- card 4 -->
+                  <div
+                    class="card p-4 rounded-4 cus-card"
+                    style="--bg-color: to right, #e8bdf9 50%, #d8ded6 100%"
+                  >
+                    <div>
+                      <div style="min-height: 3rem">
+                        <h6 class="m-0">Task</h6>
+                      </div>
+                      <!-- <span class="fw-semibold">Last 60 days</span> -->
+                      <div class="count my-2 fs-1 fw-semibold">3</div>
+                      <div class="footer fw-semibold">
+                        <div>Completed: 3</div>
+                        <div>Overdue: 3</div>
+                      </div>
+                    </div>
+                    <div class="card-icon">
+                      <i class="bi bi-list-task fs-4"></i>
+                    </div>
+                  </div>
+
+                  <!-- card 5 -->
+                  <div
+                    class="card p-4 rounded-4 cus-card"
+                    style="--bg-color: to right, #e8bdf9 50%, #d8ded6 100%"
+                  >
+                    <div>
+                      <div style="min-height: 3rem">
+                        <h6 class="m-0">Invoices</h6>
+                      </div>
+                      <div class="count my-2 fs-1 fw-semibold">3</div>
+                      <div class="footer fw-semibold">
+                        <div>Completed: 0</div>
+                        <div>Overdue: 0</div>
+                      </div>
+                    </div>
+                    <div class="card-icon">
+                      <i class="bi bi-file-bar-graph-fill fs-4"></i>
+                    </div>
+                  </div>
+                </section>
 
                 <!-- Table  -->
-                <section id="table">Table</section>
+                <section id="table" class="random">Table</section>
               </div>
             </div>
           </div>
