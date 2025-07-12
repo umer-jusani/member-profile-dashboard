@@ -1,4 +1,3 @@
-
 :root {
   --clr-primary: #1c2430;
   --clr-blue: #1180e2;
@@ -128,10 +127,10 @@ select {
 /* primary header */
 #primary-header nav {
   background-color: var(--clr-light-gray-200);
+  border-bottom: 1px solid #cfd1d2;
 
   & #searchIcon {
     width: min(300px, 100%);
-    
   }
 }
 
@@ -192,12 +191,9 @@ select {
     grid-template-columns: auto 1fr;
     grid-gap: 5px;
   }
-
-
 }
 
 #personal-Information .accordion-body {
-  
 }
 
 #personal-Information .accordion-button,
@@ -235,6 +231,7 @@ select {
 /* navigation-tabs */
 #navigation-tabs {
   border: 1px solid #cfd1d2;
+  border-top: none;
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
