@@ -26,120 +26,251 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="container-fluid">
+    <div class="container-fluid">
       <div class="row">
-        <!-- header -->
-        <header id="primary-header" class="col-12 px-0">
-          <nav class="navbar navbar-expand-lg px-md-3 px-sm-2 px-1 py-md-3">
-            <!-- Search Input -->
-            <form
-              id="searchIcon"
-              class="d-flex position-relative w-100"
-              style="max-width: 300px"
-            >
-              <button
-                class="position-absolute start-0 top-50 translate-middle-y bg-transparent border-0 p-0 z-2 ms-3"
-                type="submit"
-                aria-label="Search"
-              >
-                <i class="bi bi-search"></i>
-              </button>
-              <input
-                class="form-control ps-5 border-none py-2"
-                type="search"
-                placeholder="Search contact"
-                aria-label="Search contact"
-              />
-            </form>
+        <!-- Sidebar (Desktop Only) -->
+        <aside
+          class="col-auto d-none d-md-block sidebar text-white px-0 py-4 min-vh-100"
+        >
+          <nav aria-label="Sidebar Navigation">
+            <!-- <img src="assets/logo.png" class="logo mx-auto d-block mb-3" alt="Logo" /> -->
 
-            <div
-              class="collapse navbar-collapse mx-5"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav ms-auto gap-2">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-person fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-people fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-star fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-calendar4-week fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-chat-right-dots fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-file-binary fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-bell fs-5 text-black"></i>
-                  </a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">
-                    <i class="bi bi-clock fs-5 text-black"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <!-- PEOPLE -->
+            <ul class="nav flex-column text-center mb-3">
+              <li class="nav-item">
+                <span class="nav-link text-white-50 small">PEOPLE</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-people"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-calendar2-week"></i
+                ></a>
+              </li>
+            </ul>
 
-            <!-- Profile  -->
-            <div class="profile-display d-flex">
-              <div class="profile-pic">
-                <img
-                  src="/assets/profile.jpg"
-                  alt="Profile"
-                  class="rounded-1"
-                  width="40"
-                  height="40"
-                />
-              </div>
+            <!-- SCHEDULE -->
+            <ul class="nav flex-column text-center mb-3">
+              <li class="nav-item">
+                <span class="nav-link text-white-50 small">SCHEDULE</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-person-fill"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-calendar"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-file-earmark"></i
+                ></a>
+              </li>
+            </ul>
 
-              <div class="profile-info mx-2 d-sm-block d-none">
-                <div class="text-black fw-semibold">Savannah Nguyen</div>
-                <div class="profile-role text-muted small">Admin</div>
-              </div>
+            <!-- SALE -->
+            <ul class="nav flex-column text-center mb-3">
+              <li class="nav-item">
+                <span class="nav-link text-white-50 small">SALE</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-percent"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-wallet2"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-receipt"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-funnel"></i
+                ></a>
+              </li>
+            </ul>
 
-              <div class="dropdown-arrow mt-1 d-sm-block d-none">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 6L8 10L12 6"
-                    stroke="#6C757D"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
-            </div>
+            <!-- PAYMENT -->
+            <ul class="nav flex-column text-center mb-3">
+              <li class="nav-item">
+                <span class="nav-link text-white-50 small">PAYMENT</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-people"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-calendar2-week"></i
+                ></a>
+              </li>
+            </ul>
+
+            <!-- SPARK -->
+            <ul class="nav flex-column text-center mb-3">
+              <li class="nav-item">
+                <span class="nav-link text-white-50 small">SPARK</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-ev-front"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-calendar2-week"></i
+                ></a>
+              </li>
+            </ul>
+
+            <!-- OTHERS -->
+            <ul class="nav flex-column text-center mb-3">
+              <li class="nav-item">
+                <span class="nav-link text-white-50 small">OTHERS</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-gear"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-chat-dots"></i
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#"
+                  ><i class="bi bi-box-arrow-right"></i
+                ></a>
+              </li>
+            </ul>
           </nav>
-        </header>
+        </aside>
 
-        <div class="col-12 px-0">
-          <div class="container-fluid">
+        <div class="col px-0">
+          <!-- header -->
+          <header id="primary-header">
+            <nav class="navbar navbar-expand-lg px-md-3 px-sm-2 px-1 py-md-3">
+              <!-- Search Input -->
+              <form
+                id="searchIcon"
+                class="d-flex position-relative w-100"
+                style="max-width: 300px"
+              >
+                <button
+                  class="position-absolute start-0 top-50 translate-middle-y bg-transparent border-0 p-0 z-2 ms-3"
+                  type="submit"
+                  aria-label="Search"
+                >
+                  <i class="bi bi-search"></i>
+                </button>
+                <input
+                  class="form-control ps-5 border-none py-2"
+                  type="search"
+                  placeholder="Search contact"
+                  aria-label="Search contact"
+                />
+              </form>
+
+              <div
+                class="collapse navbar-collapse mx-5"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav ms-auto gap-2">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-person fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-people fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-star fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-calendar4-week fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-chat-right-dots fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-file-binary fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-bell fs-5 text-black"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-clock fs-5 text-black"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Profile  -->
+              <div class="profile-display d-flex">
+                <div class="profile-pic">
+                  <img
+                    src="/assets/profile.jpg"
+                    alt="Profile"
+                    class="rounded-1"
+                    width="40"
+                    height="40"
+                  />
+                </div>
+
+                <div class="profile-info mx-2 d-sm-block d-none">
+                  <div class="text-black fw-semibold">Savannah Nguyen</div>
+                  <div class="profile-role text-muted small">Admin</div>
+                </div>
+
+                <div class="dropdown-arrow mt-1 d-sm-block d-none">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 6L8 10L12 6"
+                      stroke="#6C757D"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </nav>
+          </header>
+
+          <main class="container-fluid">
             <div class="row" data-role="main-content">
               <!-- Profile Information  -->
               <section
@@ -250,8 +381,8 @@
                             <span class="fw-semibold text-black-50"
                               >Mobile Phone #2</span
                             >
-                            <span
-                              ><i class="bi bi-plus-circle-fill fs-5 me-1"></i
+                            <span class="text-primary fw-semibold"
+                              ><i class="bi bi-plus-circle-fill fs-5 me-2"></i
                               >add new Phone</span
                             >
                           </li>
@@ -260,17 +391,17 @@
                               class="fw-semibold text-black-50 text-black-50"
                               >Email Address</span
                             >
-                            <span
-                              ><i class="bi bi-envelope fs-5 me-1"></i>add new
-                              Email</span
+                            <span class="text-primary fw-semibold">
+                              <i class="bi bi-envelope fs-5 me-2 text-black"></i
+                              >izzy@gmail.com</span
                             >
                           </li>
                           <li class="nav-item active">
                             <span class="fw-semibold text-black-50"
                               >Email Address #2</span
                             >
-                            <span
-                              ><i class="bi bi-plus-circle-fill fs-5 me-1"></i
+                            <span class="text-primary fw-semibold"
+                              ><i class="bi bi-plus-circle-fill fs-5 me-2"></i
                               >add new Email</span
                             >
                           </li>
@@ -487,7 +618,7 @@
                 </section>
 
                 <!-- Table  -->
-                <section id="table-container" class="">
+                <section id="table-container">
                   <div class="wrapper">
                     <!-- heading  -->
                     <div
@@ -792,7 +923,7 @@
                         </tbody>
                       </table>
                     </div>
-                    
+
                     <!-- Pagination -->
                     <nav aria-label="Page navigation example">
                       <ul class="pagination justify-content-center pb-2">
@@ -823,10 +954,10 @@
                 </section>
               </div>
             </div>
-          </div>
+          </main>
         </div>
       </div>
-    </main>
+    </div>
 
     <!-- Bootstrap Bundle JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

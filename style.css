@@ -1,3 +1,20 @@
+.checking {
+  background-color: red;
+  width: fit-content;
+  min-height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 :root {
   --clr-primary: #1c2430;
   --clr-blue: #1180e2;
@@ -113,7 +130,7 @@ select {
 .sidebar .nav-link {
   font-size: 14px;
   /* color: var(--fs-clr-primary) !important; */
-  background-color: var(--clr-light-gray);
+  background-color: var(--color-sidebar-bg);
 
   & .nav-link i {
     font-size: 17px;
@@ -186,6 +203,12 @@ select {
     grid-template-columns: auto 1fr;
     grid-gap: 5px;
   }
+
+
+}
+
+#personal-Information .accordion-body {
+  
 }
 
 #personal-Information .accordion-button,
