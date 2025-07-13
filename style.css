@@ -172,16 +172,20 @@ select {
 
   & img {
     width: 100%;
-    height: auto;
+    max-height: 500px;
+    object-fit: cover;
   }
 
   & [data-user="belongings"] {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+
+    /* grid-template-columns: 1fr 1fr; */
     gap: 10px;
   }
 
   & [data-user="belongings"] button {
     font-weight: 500;
+    text-wrap: nowrap;
     background-color: rgba(232, 242, 253, 1);
   }
 
@@ -198,13 +202,11 @@ select {
 
   & [data-role="tags"] {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-gap: 5px;
   }
 }
 
-#personal-Information .accordion-body {
-}
 
 #personal-Information .accordion-button,
 #personal-Information .accordion-body {

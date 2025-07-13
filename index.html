@@ -30,7 +30,7 @@
       <div class="row">
         <!-- Sidebar (Desktop Only) -->
         <aside
-          class="col-auto d-none d-md-block sidebar text-white px-0 py-4 min-vh-100"
+          class="col-auto d-none d-xl-block sidebar text-white px-0 py-4 min-vh-100"
         >
           <nav aria-label="Sidebar Navigation">
             <img
@@ -329,7 +329,7 @@
             >
               <!-- Mobile Toggle Button -->
               <button
-                class="btn btn-primary d-md-none p-0 bg-white border-0 mx-2"
+                class="btn btn-primary d-xl-none p-0 bg-white border-0 mx-2"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#sidebarMenu"
@@ -417,8 +417,8 @@
                 </div>
 
                 <div class="profile-info mx-2 d-sm-block d-none">
-                  <div class="text-black fw-semibold">Savannah Nguyen</div>
-                  <div class="profile-role text-muted small">Admin</div>
+                  <span class="text-black fw-semibold">Savannah Nguyen</span>
+                  <span class="d-block profile-role text-muted small">Admin</span>
                 </div>
 
                 <div class="dropdown-arrow mt-1 d-sm-block d-none">
@@ -451,7 +451,7 @@
               <!-- Profile Information  -->
               <section
                 id="personal-Information"
-                class="col-md-3 | p-md-3 p-1 | flow"
+                class="col-xl-3 | p-md-3 p-1 | flow"
                 style="--flow-spacer: 2rem"
               >
                 <div class="flow" style="--flow-spacer: 1rem">
@@ -605,20 +605,28 @@
                       data-bs-parent="#accordionExample"
                     >
                       <div class="accordion-body" data-role="tags">
-                        <button type="button" class="btn">
-                          <i class="bi bi-tag fs-6"></i>
+                        <button type="button" class="btn btn-sm">
+                          <i
+                            class="bi bi-tag fs-6 d-lg-inline-block d-none"
+                          ></i>
                           benefits-focus
                         </button>
-                        <button type="button" class="btn">
-                          <i class="bi bi-tag fs-6"></i>
+                        <button type="button" class="btn btn-sm">
+                          <i
+                            class="bi bi-tag fs-6 d-lg-inline-block d-none"
+                          ></i>
                           attended-appointment
                         </button>
-                        <button type="button" class="btn">
-                          <i class="bi bi-tag fs-6"></i>
+                        <button type="button" class="btn btn-sm">
+                          <i
+                            class="bi bi-tag fs-6 d-lg-inline-block d-none"
+                          ></i>
                           bought-uniform
                         </button>
-                        <button type="button" class="btn">
-                          <i class="bi bi-tag fs-6"></i>
+                        <button type="button" class="btn btn-sm">
+                          <i
+                            class="bi bi-tag fs-6 d-lg-inline-block d-none"
+                          ></i>
                           interested-in-kungfu
                         </button>
                       </div>
@@ -626,15 +634,15 @@
                   </div>
                 </div>
               </section>
-
-              <div class="col-md-9 px-0 flow" style="--flow-spacer: 1.5rem">
+              
+              <div class="col-xl-9 px-0 flow" style="--flow-spacer: 1.5rem">
                 <!-- navlinks  -->
                 <section id="navigation-tabs" class="bg-white px-0">
                   <nav
                     class="nav nav-tabs border-bottom-0"
                     id="navigation-tabs"
                   >
-                    <a class="nav-link py-md-3 py-2 text-center" href="#">
+                    <a class="nav-link | py-md-3 py-2 | text-center" href="#">
                       <i class="bi bi-person-square | me-1 fs-5"></i>
                       <span class="d-lg-inline-block d-none fw-semibold"
                         >Profile</span
@@ -646,26 +654,26 @@
                         >Notes</span
                       >
                     </a>
-                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                    <a class="nav-link | py-md-3 py-1 | text-center" href="#">
                       <i class="bi bi-chat-left-dots me-1 fs-5"></i>
                       <span class="d-lg-inline-block d-none fw-semibold"
                         >Communication</span
                       >
                     </a>
-                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                    <a class="nav-link | py-md-3 py-1 | text-center" href="#">
                       <i class="bi bi-person me-1 fs-5"></i>
                       <span class="d-lg-inline-block d-none fw-semibold"
                         >Workouts</span
                       >
                     </a>
-                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                    <a class="nav-link | py-md-3 py-1 | text-center" href="#">
                       <i class="bi bi-calendar-check me-1 fs-5"></i>
                       <span class="d-lg-inline-block d-none fw-semibold"
                         >Attendence</span
                       >
                     </a>
                     <a
-                      class="nav-link py-md-3 py-1 text-center"
+                      class="nav-link | py-md-3 py-1 | text-center"
                       href="#"
                       data-link="active"
                     >
@@ -674,7 +682,7 @@
                         >Invoices</span
                       >
                     </a>
-                    <a class="nav-link py-md-3 py-1 text-center" href="#">
+                    <a class="nav-link | py-md-3 py-1 | text-center" href="#">
                       <i class="bi bi-bar-chart-line me-1 fs-5"></i>
                       <span class="d-lg-inline-block d-none fw-semibold"
                         >Ranks</span
