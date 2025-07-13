@@ -2,20 +2,23 @@
   --clr-primary: #1c2430;
   --clr-blue: #1180e2;
   --clr-gray: #8b8b8b;
-  --clr-light-gray-100: rgba(228, 228, 230);
-  --clr-light-gray-200: rgba(247, 248, 250);
-  --clr-lightBlue: #4a90e2;
-  --clr-purple: #9b59b6;
-  --clr-yellow: #f1c40f;
-  --clr-red: #e91e63;
-  --clr-green: #2ecc71;
-  --clr-white: #ffff;
+  --clr-light-gray-100: #e4e4e6;
+  --clr-light-gray-200: #f7f8fa;
 
-  --color-sidebar-bg: rgba(46, 50, 80, 1);
+  /* bgcolors */
+  --bg-clr-bg: rgba(46, 50, 80, 1);
+  --bg-clr-primary: #ffff;
+  --bg-clr-secondary: #e4e4e6;
+  --bg-clr-tertiary: #cfd1d2;
+  --bg-clr-foreground: #f7f8fa;
+  --bg-clr-100: #cfd1d2;
+  --bg-clr-200: #eaeef1;
+  --bg-clr-300: #e5e5e5;
+  --bg-clr-400: #e8f2fd;
 
   /* Font-Colors */
   --fs-clr-black: var(--clr-primary);
-  --fs-clr-white: var(--clr-white);
+  /* --fs-clr-white: var(--clr-white); */
   --fs-clr-blue: var(--clr-blue);
   --fs-clr-gray: var(--clr-gray);
 }
@@ -113,7 +116,7 @@ select {
 .sidebar .nav-link {
   font-size: 14px;
   /* color: var(--fs-clr-primary) !important; */
-  background-color: var(--color-sidebar-bg);
+  background-color: var(--bg-clr-bg);
 
   & .nav-link i {
     font-size: 17px;
@@ -136,7 +139,7 @@ select {
 
 /* primary header */
 #primary-header nav {
-  background-color: var(--clr-light-gray-200);
+  background-color: var(--bg-clr-foreground);
   border-bottom: 1px solid #cfd1d2;
 
   & #searchIcon {
@@ -145,7 +148,7 @@ select {
 }
 
 #primary-header input[type="search"] {
-  background-color: var(--clr-light-gray-100);
+  background-color: var(--bg-clr-secondary);
 }
 
 #primary-header input[type="search"]::placeholder {
@@ -156,7 +159,7 @@ select {
 
 #primary-header ul li {
   border: 2px solid #cfd1d2;
-  background-color: var(--clr-light-gray-100);
+  background-color: var(--bg-clr-secondary);
   border-radius: 5px;
   width: 50px;
   height: 40px;
@@ -167,7 +170,7 @@ select {
 
 /* Profile Information */
 #personal-Information {
-  background-color: white;
+  background-color: var(--bg-clr-primary);
   /* border: 1px solid #cfd1d2; */
 
   & img {
@@ -186,7 +189,7 @@ select {
   & [data-user="belongings"] button {
     font-weight: 500;
     text-wrap: nowrap;
-    background-color: rgba(232, 242, 253, 1);
+    background-color: var(--bg-clr-400);
   }
 
   & .upload-icon {
@@ -207,7 +210,6 @@ select {
   }
 }
 
-
 #personal-Information .accordion-button,
 #personal-Information .accordion-body {
   background-color: transparent;
@@ -216,7 +218,7 @@ select {
 
   & button {
     font-weight: 550;
-    background-color: var(--clr-light-gray-100);
+    background-color: var(--bg-clr-secondary);
   }
 }
 
@@ -236,7 +238,7 @@ select {
 
   &:hover {
     cursor: pointer;
-    background-color: var(--clr-light-gray-200);
+    background-color: var(--bg-clr-foreground);
   }
 }
 
@@ -316,12 +318,12 @@ select {
 #table-container {
   & thead {
     border-radius: 10px;
-    background-color: rgba(242, 242, 242, 1);
+    /* background-color: #f2f2f2; */
     font-weight: 500;
   }
 
   & [data-role="checkbox"] {
-    color: rgba(216, 216, 216, 1);
+    color: #d8d8d8;
   }
 
   & .wrapper {
