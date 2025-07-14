@@ -4,6 +4,7 @@
   --clr-gray: #8b8b8b;
   --clr-light-gray-100: #e4e4e6;
   --clr-light-gray-200: #f7f8fa;
+  --clr-yellow: #f1c40f;
 
   /* bgcolors */
   --bg-clr-bg: rgba(46, 50, 80, 1);
@@ -15,6 +16,7 @@
   --bg-clr-200: #eaeef1;
   --bg-clr-300: #e5e5e5;
   --bg-clr-400: #e8f2fd;
+  --bg-clr-500: #e8f1ff;
 
   /* Font-Colors */
   --fs-clr-black: var(--clr-primary);
@@ -120,6 +122,19 @@ select {
 
   & .nav-link i {
     font-size: 17px;
+  }
+
+  & [data-link="active"] .nav-link {
+    /* border: 2px solid white; */
+    margin-inline: 10px;
+    width: calc(100% - 2rem);
+    height: 50px;
+    border-left: 3px solid white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #0d6efd;
   }
 
   & .logo {
@@ -244,8 +259,9 @@ select {
 
 /* navigation-tabs */
 #navigation-tabs {
-  border: 1px solid #cfd1d2;
+  border: 0.5px solid #cfd1d2;
   border-top: none;
+  /* border-left-width: 0px; */
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -307,6 +323,10 @@ select {
     justify-content: center;
     align-items: center;
   }
+
+  & .card h6 {
+    width: min(100px, 100%);
+  }
 }
 
 .card span {
@@ -337,6 +357,12 @@ select {
     border-radius: 10px;
     border: 1px solid #cfd1d2;
   }
+}
+
+.table td button {
+  background-color: var(--bg-clr-500);
+  color: var(--fs-clr-black);
+  border: none;
 }
 
 .table td,
